@@ -21,6 +21,10 @@ In order to have a highly available environment for the DevCon event, we have se
 
 The proof of concept was implemented to follow best practices and guidelines about microservices architecture. The main objective is to show team skills and to prove our capability to build a scalable and robust platform. We aim to target millions of users, that is why we have set such an architecture.
 
+#### Architecture overview
+
+![hellhound_architecture_overview](/Users/abdelhamid/Documents/GitHub/ext/hellhound/hellhound_architecture_overview.png)
+
 #### Demo story
 
 The purpose of the demo is to show how to use a decentralized blind computation platform to execute a service for the end user. We will describe the use case example and the related story presented during the showcase.
