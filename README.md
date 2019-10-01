@@ -23,7 +23,7 @@ The proof of concept was implemented to follow best practices and guidelines abo
 
 #### Architecture overview
 
-![hellhound_architecture_overview](/Users/abdelhamid/Documents/GitHub/ext/hellhound/hellhound_architecture_overview.png)
+![hellhound_architecture_overview](hellhound_architecture_overview.png)
 
 #### Demo story
 
