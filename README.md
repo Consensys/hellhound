@@ -4,7 +4,7 @@ HellHound is a **decentralized blind computation** platform.
 
 ## Escape game at DevCon 4
 
-[Demo](https://www.youtube.com/watch?v=mztQHrRXEXs)
+[![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs)
 
 ### Proof of concept.
 #### Introduction
