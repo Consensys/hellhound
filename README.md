@@ -2,6 +2,10 @@
 # Hellhound
 HellHound is a **decentralized blind computation** platform.
 
+[Black Paper - Mission statement document](https://github.com/ConsenSys/hellhound/blob/master/hellhound-black-paper.pdf)
+
+[Red Paper - Hellhound's formal specification](https://github.com/ConsenSys/hellhound/blob/master/hellhound-red-paper.pdf)
+
 ## Escape game at DevCon 4
 
 [![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs)
