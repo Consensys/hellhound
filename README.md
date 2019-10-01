@@ -1,10 +1,17 @@
-
 # Hellhound
 HellHound is a **decentralized blind computation** platform.
 
 [Black Paper - Mission statement document](https://github.com/ConsenSys/hellhound/blob/master/hellhound-black-paper.pdf)
 
 [Red Paper - Hellhound's formal specification](https://github.com/ConsenSys/hellhound/blob/master/hellhound-red-paper.pdf)
+
+## Components
+
+- **Tanden** - virtual machine: https://github.com/ConsenSys/hellhound-vm
+- **Styx** - smart contract suite:  https://consensys-hellhound.gitlab.io/styx/
+- **Pythia** - recommendation engine: https://gitlab.com/consensys-hellhound/pythia
+- **Cerberus** - light client: https://gitlab.com/consensys-hellhound/cerberus
+- **Dashboard** - web UI: https://gitlab.com/consensys-hellhound/dashboard
 
 ## Escape game at DevCon 4
 
@@ -86,3 +93,29 @@ In the demo, 2 nodes are malicious and always give false results for any computa
 We have intentionally slowed down the Virtual Machine instruction execution to have a graphical representation of the overall computation that can be understand by a human. The end user is able to see the live status of the computation because each individual instruction execution is traced in the system using the message broker.
 
 Once the computation is done, the light client perform the decryption of the result and retrieve the plain output. Magical.
+
+## Ubiquitous language
+
+Ubiquitous Language is the term Eric Evans uses in **Domain Driven Design** for the practice of building up a common, rigorous language between developers and users. This language should be based on the Domain Model used in the software - hence the need for it to be rigorous, since software doesn't cope well with ambiguity and neither do humans.
+
+### Glossary
+
+#### Kokoro - Soul
+
+Kokoro means "heart; mind; mentality; emotions; feelings". In HellHound context, Kokoro is assimilated to the soul of users. User private data are part of the Kokoro.
+
+#### Ki - Computation
+
+Ki is believed to be vital force forming part of any living entity. K*i* translates as "air" and figuratively as "material energy", "life force", or "energy flow".In Hellhound context, the Ki denotes the computations running on HellHound network.Basically, the term Ki stands for the program interpreted and executed by the Tanden (HellHound  Virtual Machine).
+
+#### Kokyu - Computation byte code
+
+Kokyu can be assimilated to the Ki. Kokyu literally means “breath”. In HellHound context, Kokyu denotes the raw byte code that composed the Ki.
+
+#### Tanden - HellHound Virtual Machine
+
+The Tanden or lower Dantian, as conceptualised by the Chinese and Japanese martial arts, is important for their practice, because it is seen, as the term "Sea of Qi" indicates, as the reservoir of vital or source energy (Ki). It is considered as the oven of the body. Ki is considered as fire. The Tanden is used to burn the Ki. This is why in HellHound context Tanden denotes the HellHound Virtual Machine running on nodes.
+
+#### Hanko - Hash fingerprint
+
+In Japan, seals in general are referred to as Hanko. In HellHound context, Hanko denotes cryptographic hash of HellHound objects. For example the Hanko of the Tanden is the Keccak-256 hash of the concatenation of register set values and keystore keys. The Hanko of the Ki is the Keccack-256 hash of the Kokyu bytes.
