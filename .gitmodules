@@ -1,0 +1,15 @@
+[submodule "vm"]
+	path = vm
+	url = https://github.com/ConsenSys/hellhound-vm
+[submodule "styx"]
+	path = styx
+	url = https://github.com/ConsenSys/hellhound-styx
+[submodule "devcon-demo-deployment"]
+	path = devcon-demo-deployment
+	url = https://github.com/ConsenSys/hellhound-demo-devcon
+[submodule "pythia"]
+	path = pythia
+	url = https://gitlab.com/consensys-hellhound/pythia
+[submodule "dashboard"]
+	path = dashboard
+	url = https://gitlab.com/consensys-hellhound/dashboard
