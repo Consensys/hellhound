@@ -5,7 +5,7 @@ HellHound is a **decentralized blind computation** platform.
 
 [Red Paper - Hellhound's formal specification](https://github.com/ConsenSys/hellhound/blob/master/hellhound-red-paper.pdf)
 
-[![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs)
+
 
 
 ## Components
@@ -16,10 +16,12 @@ HellHound is a **decentralized blind computation** platform.
 - **Cerberus** - light client: https://gitlab.com/consensys-hellhound/cerberus
 - **Dashboard** - web UI: https://gitlab.com/consensys-hellhound/dashboard
 
-## Escape game at DevCon 4
 
-### Proof of concept.
-#### Introduction
+## Proof of concept
+
+[![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs)
+
+### Introduction
 
 The Hellhound platform is divided in multiple components and designed as a microservices architecture. First of all, hellhound components are splitted in two major categories : **on-chain** and **off-chain**.
 
@@ -120,3 +122,7 @@ The Tanden or lower Dantian, as conceptualised by the Chinese and Japanese marti
 #### Hanko - Hash fingerprint
 
 In Japan, seals in general are referred to as Hanko. In HellHound context, Hanko denotes cryptographic hash of HellHound objects. For example the Hanko of the Tanden is the Keccak-256 hash of the concatenation of register set values and keystore keys. The Hanko of the Ki is the Keccack-256 hash of the Kokyu bytes.
+
+## Escape game at DevCon 4
+[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (1/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-ed7b0f9c9f02)
+[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
