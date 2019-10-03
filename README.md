@@ -123,6 +123,9 @@ The Tanden or lower Dantian, as conceptualised by the Chinese and Japanese marti
 
 In Japan, seals in general are referred to as Hanko. In HellHound context, Hanko denotes cryptographic hash of HellHound objects. For example the Hanko of the Tanden is the Keccak-256 hash of the concatenation of register set values and keystore keys. The Hanko of the Ki is the Keccack-256 hash of the Kokyu bytes.
 
+
 ## Escape game at DevCon 4
+
 [HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (1/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-ed7b0f9c9f02)
+
 [HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
