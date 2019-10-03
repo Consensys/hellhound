@@ -126,6 +126,6 @@ In Japan, seals in general are referred to as Hanko. In HellHound context, Hanko
 
 ## Escape game at DevCon 4
 
-[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (1/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-ed7b0f9c9f02)
+[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (1/2)](https://medium.com/@hellhound_eth/hellhound-escape-game-ed7b0f9c9f02)
 
-[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2) - Mission statement document](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
+[HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2)](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
