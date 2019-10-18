@@ -164,7 +164,7 @@ The following table compares the different approaches: </br> </br>
 | Decryption side                        | No use of encryption | Server (inside SGX) | No use of encryption | Server (inside SGX) | Client side    |
 
 
-*Fig **X**. Overview of the actors our our ecosystem* </br>
+*Overview of the actors our our ecosystem* </br>
 (1) Challenge a computation by taking it to a court (miners are the judges) and there are a challenger and a solver. If the challenger questions the integrity of computation, the solver will be forced to play a verification game </br>
 (2) There is a portion of computed value to be verified </br>
 (3) The accepted result must reach the expected likelihood threshold of votes to reach consensus </br>
