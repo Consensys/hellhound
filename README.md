@@ -52,7 +52,7 @@ He has excellent programming skills in several languages as well as a tech lead 
 
 **Video**
 
-<div align="center"> [![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs) </div>
+[![Hellhound](http://img.youtube.com/vi/mztQHrRXEXs/0.jpg)](http://www.youtube.com/watch?v=mztQHrRXEXs)
 
 ### Introduction
 
