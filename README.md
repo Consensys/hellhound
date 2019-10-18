@@ -1,5 +1,5 @@
 # Hellhound
-HellHound is a **decentralized blind computation** platform.
+HellHound is a **decentralized blind computation** platform.<br/
 
 
 <div align="center"> <img src="https://miro.medium.com/max/480/1*ShmaZ3Rg_xxO7P5BLQNruA.gif"> </div>
