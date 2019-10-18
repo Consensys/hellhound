@@ -1,11 +1,40 @@
 # Hellhound
 HellHound is a **decentralized blind computation** platform.
 
+Blind computation is a process by which a function (or circuit) is successfully applied on encrypted inputs to provide the expected output. This output, depending on the use case, can be encrypted as well or it can be a plain text. 
+It is called a “Blind” computation since no one, except the data provider, know the actual data being computed.
+HellHound’s goal is to provide a truly decentralized computing environment and a set of cryptographic tools to enable dapps developers to implement privacy-by-design.
+Cryptography has been around for a long time and is used in several industries to secure exchanges and protect data. It has however often been out of reach for developers with no computer science or mathematical background.
+The reality is that not all developers need these scientific backgrounds to build their great applications or services. Unfortunately for their users, implementing security and privacy takes time and skills which most early stage startups don't have. We also believe that blockchain startups of today might be the big players of tomorrow's web 3.0.
+We think that by making the developer’s tasks easier, more startups and companies will adopt best practices in terms of privacy and foster the emergence of self-sovereignty for their users. We also strongly believe that providing a blind and verifiable computation platform, without the need of having an omniscient third part in the process, will unlock a large pool of untapped opportunities.
+We have a chance at rebuilding the internet, so as Richard Branson put it "let's not screw it, let's just do it".
+
+
+## Papers
+
 [Black Paper - Mission statement document](https://github.com/ConsenSys/hellhound/blob/master/hellhound-black-paper.pdf)
 
 [Red Paper - Hellhound's formal specification](https://github.com/ConsenSys/hellhound/blob/master/hellhound-red-paper.pdf)
 
 
+## Authors
+
+**Sajida Zouarhi - Co-Founder - Blockchain architect**
+
+Sajida Zouarhi is an Engineer and works as a Blockchain Architect @Consensys. She is also a Computer Science researcher and worked with a major Telecommunications Operator (Orange) during her PHD thesis. Her research work focused on private data transmission over communication channels on complex systems and quality of service on an end-to-end critical service (recommendation engine, SLAs, ontologies etc.).
+She is President of the eHealth and Blockchain Think Tank and the co-founder of several french national blockchain associations, and has been a technical advisor on the board of several Blockchain projects. As the founder of the Kidner Project, she collaborated with WHO to help prevent Kidney Trafficking using Blockchain technology. She is an international Speaker, Hackathon Mentor and organizer with the Blockfest that she co-founded in 2016 in France.
+
+
+**Amira Bouguera - Co-Founder - Cryptographer**
+
+Amira Bouguera is a Cryptographer, Mathematician and works as a cryptographer @Consensys. She has previously worked in the blockchain space prior to joining Consensys as a security engineer at Stratumn (traceability blockchain startup) and smart contract security auditor. Amira became interested in privacy and security related issues when she was studying cryptography. During that period, she worked in LJK applied math laboratory with one of the best international cryptographers on outsourced computation using Homomorphic encryption and Zero knowledge methods. She helped organizing the Grehack security conference and workshops. She is also an international speaker and gave talks about blockchain introduction, smart contracts security and cryptography during conferences (Dappcon) and meetups.
+
+
+
+**Abdelhamid Bakhta - Tech Lead and Full stack engineer** 
+
+Abdelhamid is highly skilled, versatile and creative engineer with experience in e-banking and software development. Abdelhamid works daily with cloud infrastructure solution. 
+He has excellent programming skills in several languages as well as a tech lead (management and business administration). He also has strong technical assets in security. Previously security officer of a fintech startup, he lead PCI certification compliance program for a Cloud Based Payment platform. Blockchain enthusiast, Abdelhamid is passionated by decentralization and actively followed the blockchain world since 5 years. Co-inventor of multiple patents, Abdelhamid has also a strong interest for ethical hacking.
 
 
 ## Components
