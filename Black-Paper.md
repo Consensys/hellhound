@@ -35,8 +35,8 @@
     2.5. [HOWL](#howl) </br>
     2.6. [Cerberus -  Light client for the user](#cerberusclient) </br>
     2.7. [Styx - Smart Contracts suite](#styx) </br>
-3. [How to use HellHound](#usehh) </br>
-    3.1. [Deployment on Hellhound](#deployhh) </br>
+3. [How to use and deploy on HellHound](#usehh) </br>
+    3.1. [User Story](#userstory) </br>
     3.2. [Cryptosystems](#cryptosystems) </br>
     3.3. [Verification of computation on HellHound](#verification) </br>
 4. [HellHound Use cases](#usecases) </br>
@@ -44,14 +44,10 @@
     4.2. [DNA sequence searching](#dna) </br>
     4.3. [Salaries - analytics without disclosing salaries](#analytics) </br>
     4.4. [Kidner - matching algorithm](#matching) </br>
-    4.5. [Voting](#voting) </br>
-    4.6. [Quantum safe approaches](#quantum) </br>
+    4.5. [Quantum safe approaches](#quantum) </br>
 5. [Economical model](#model) </br>
-    5.2. [Business model](#businessmodel) </br>
-    5.3. [Incentivization system](#incentivization) </br>
-    5.4. [Node incentivization](#nodeincentivization) </br>
-    5.5. [Decentralized reward delivery mechanism](#reward) </br>
-    5.6. [Cerberus incentivization](#subreward) </br>
+    5.1. [Business model](#businessmodel) </br>
+    5.2. [Incentivization system](#incentivization) </br>
 6. [HellHound attacks resistance](#attacks) </br>
 7. [Roadmap](#roadmap) </br>
 8. [Join us in the HellHound journey](#joinus) </br>
@@ -404,46 +400,344 @@ Requirements: computing power, resources, legal commitment, SLA etc. </br>
     - **Confirmation**: After all requirements are verified and the nodes submit their stake, HellHound contract will confirm their registration to the network both legally and on-chain. </br>
 
 **HH Node Selection** </br>
+
+For each computation round, a subset k-of-n nodes will be chosen to perform this computation. The selection is divided into two steps:</br>
+1. **Pre-selection**: </br>
+During this phase, a subset m-of-n nodes will be selected based on different factors such as </br>
+- computation capacity of the nodes: computation power, available memory, geographical location etc., 
+- reputation: </br>
+        - HOWL’s Decentralized reputation system.</br>
+        - HOWL’s Continuous audit interaction between nodes (challenges).    </br>
+2. **Random selection**: </br>
+The second round of selection will be taken only from the subset m and not the whole network since only these nodes are eligible for the work according to their capabilities and reputation.</br> HH runs a random function selection to determine the identities of the nodes which will participate in the next round. Only a set of k nodes will be selected (the value of k is dependent on the cryptographic system used in the computation). </br>
+
+
+
 **HellHound Node participation** </br>
+The chosen nodes will be notified when there is a request for computation, the request will contain the proposed price for each operation which was computed. The previous mentioned price will be computed according to HH standards (open formula) which nodes approve on when going through Purgatory.  </br>
+Based on the SLA (service level agreement) they signed on-chain, HellHound nodes that are unavailable to perform a computation or that try to send back fake results will see their reputation decreased and their stake endangered. </br>
 
 
   ### HOWL   <a name="howl"></a>
+ 
+The HOWL protocol is used by Cerberus/HellHounds to communicate safely and in the most decentralized way possible.
+
+The HOWL protocol is used for:  </br>
+- Computing in a decentralized fashion reputation of the HellHound nodes, </br>
+- Communicating with on-chain elements (STYX smart contracts), </br>
+- Auditing the nodes to maintain a high-level of integrity in calculations using challenge games between HH nodes. </br> </br>
+
+In this part we will introduce the Decentralized Reputation System of HellHound. </br>
+
+**HOWL’s decentralized reputation system**  </br>
+Hellhound uses a decentralized reputation system in order to calculate the aggregation of trust between the different Hellhound nodes. </br> Each node knows its partial trust on its neighbors and wants to compute its trust on other nodes in the network. Considering that the trust of each node for its neighbors is private, the reputation function should not reveal partial trust nor the final trust computed in order to guarantee both safety and privacy. </br></br>
+
+
+*1. Step 1: Partial Trust*</br>
+Nodes can create small groups of neighbors, inside each group, nodes challenge one another using different testing techniques to figure out which members of the group are up or down and which are honest or malicious. These challenges will allow every node to construct trust knowledge about its neighbors. </br>
+Trust is represented by a triplet (**trust, distrust, uncertainty**)</br>
+1. Trust represents the percentage of positive experiences, </br>
+2. Distrust the percentage of negative experiences,</br>
+3. Uncertainty would represent lack of information about another node (e.g. when a node is freshly added to the network). *uncertainty = 1 - trust - distrust*</br></br>
+
+
+<img src="https://live.staticflickr.com/65535/48920691823_3af2513436_b.jpg" /> 
+
+
+</br></br>
+*2. Step 2: Global Trust*</br>
+The HH network contains N nodes of workers, each one of these workers has a partial trust on some of their neighbors but does not know the level of trust they could put on other workers. In order to compute the global trust, all nodes must collaborate and share their collective partial trust values encrypted with everyone on the network. </br>
+
+</br></br>
+
+*3. Step 3: Aggregated Trust* </br>
+The aggregated trust is computed from the average (for each x,y in the matrix) of all global trust matrix computed during the previous step. This aggregated matrix of averages is stored on the STYX and is considered the absolute value of nodes’ reputation. </br>
+
+
   ### Cerberus -  Light client for the user   <a name="cerberusclient"></a>
+  
+  
+  Cerberus is a client with features that vary from those of the HellHound nodes. </br>
+Cerberus runs on the local environment of the user and acts as a bridge between the end-user and the HellHound platform.  </br>
+This client is identified during the **authentication phase** with the HellHound nodes and with the Styx smart contract that handles an anonymous registry of all users. The authentication token that is generated during this registration phase enables Cerberus to interact securely and independently with the HellHound nodes.  </br>
+The HellHound nodes can at any time search the blockchain to verify if the Cerberus client trying to interact with them is registered on Styx and that both identifiers (Cerberus client and the one on Styx) are a match. All transactions between Cerberus and HellHound or Styx are signed by Cerberus and verified. </br> </br>
+
+Cerberus provides a user interface (dashboard) enabling the user to monitor the services deployed on HellHound, for example:</br>
+- the progress of her computation, </br>
+- the state of the Pack (HH nodes selected as the cluster to work on her task), </br>
+- the results (when available) </br>
+- and a verification option (involving staking for the user).</br></br>
+
+Cerberus can play the role of “Verifier” and take part in verification of computation by calculating pre-processed data that will be used after to verify the correctness of the HellHound nodes results, they act as “Provers”. </br>
+
+
+
   ### Styx - Smart Contracts suite <a name="styx"></a>
   
-## How to use HellHound <a name="usehh"></a> </br>
+STYX smart contracts handle the following aspects:</br>
 
-  ### Deployment on Hellhound <a name="deployhh"></a> 
-  ### Cryptosystems <a name="cryptosystems"></a>
-**MPC - multi party computation** </br>
-**HE - homomorphic encryption** </br>
-**ZKP - zero knowledge proof** </br>
+- Mapping of all Cerberus clients that wish to interact together</br>
+- Proofs generated during computation,</br>
+- Reputation (aggregated trust matrix),</br>
+- Security deposit of the Cerberus clients,</br>
+- Reward distribution for the HellHound nodes,</br>
+- Root hashes of computation steps (e.g. TrueBit)</br></br>
+
+Client and HellHound nodes can call the Smart contract to update intermediary values (proofs) needed during the MPC phase for example - see Verification of computation on HellHound.</br>
+Each computation/query is identified on hellhound by its computation ID and linked to the address of the client (Ethereum or other blockchain address that has initiated the query).</br>
+Requirement is that the same Ethereum address that was generated at the beginning for the Cerberus client at the “query & deployment phase” is the one used after for all interactions.</br></br>
+
+ 
+    
+## How to use and deploy on HellHound <a name="usehh"></a> </br>
+
+*Using HellHound for your products and services*
+
+Various use cases can be built using HellHound but to leverage this technology properly the use case need to be aligned with these assumptions:</br>
+User’s privacy is a core value and responsible data management is a goal.</br>
+Traditional actor handling the computation isn’t trusted.  </br>
+If this is not the case, then there is no need for a decentralized computation system since the choice of trusting a central authority has been made. This means that any company can run a blind computation service as a sole entity and the customers will still need to trust it for the correctness of the result.</br>
+The time needed to verify the computation is shorter than the time needed to perform the computation.</br>
+If this is not the case, then any actor can just do the calculation itself. There is no need to delegate the computation and no need to worry about a potential disclosure of information to a third party. Of course, if the use case involves heavy computation (compute-intensive) tasks, then the computation need to be delegated.</br>
+The data needed to perform the computation come from multiple actors which don’t necessarily trust each other.</br>
+If this is not the case, then we would have one actor being able to encrypt all data with one key and delegate the computation to a 3rd part. This is very convenient but it doesn’t work if you are processing data, for example in a matching service, coming from differents sources. Each sources will encrypt its data with its own pair of key, making it impossible for one cryptosystems to process the information. In that case, you will need a platform with a cluster of nodes able to perform SMPC over this computation and obviously those nodes need to be independent so it needs to be nodes coming from a decentralized architecture and node from one single company.</br></br>
+
+Encrypted data is stored on the hellhound nodes for the duration of the computation task.</br>
+
+### User Story <a name="userstory"></a> </br>
+
+1. Using HellHound to know what Cryptosystems to use in your service</br>
+2. Using HellHound to deploy your service</br>
+3. Storage of encrypted Data</br>
+4. Computation of encrypted data</br>
+5. Results can be encrypted or plaintext</br>
+
   
-  ### Verification of computation on HellHound  <a name="verification"></a>
+  
+ ### Cryptosystems <a name="cryptosystems"></a>
+ 
+ The following use cases list are examples of services that can use HellHound to solve privacy and computation issues. We provide this list as an illustration of how HellHound adds value to dapps. Some of these services are currently being developed by different teams around the world. </br>
+HellHound’s goal is to help developers and project owners understand how to leverage the HellHound platform.</br></br>
+
+HellHound will provide different computation methods depending on the use case, calculations, inputs, time constraints etc. Our current approach focuses mainly on these families: SMPC, HE and ZKP. This part will provide some general information about these cryptosystems. Each cryptosystem has its pros and cons and it’s hard to grasp them without a deep understanding of the maths behind. This is why we are writing for the community a “CryptoMap”, a paper mapping the state of the art of the existing cryptosystems through several criterias such as time, complexity, interactivity, quantum resistance etc. </br>
+ 
+**MPC - multi party computation** </br>
+
+A cryptographic method that allows nparties to jointly compute an agreed function fof their inputs x1,x2,...........,xn where each party iknows xi. </br>
+Parties will compute f(x1,x2,..........,xn)=(y1,y2,............,yn)where each party i can only learn the output share yiand no additional information. </br>
+
+
+**HE - homomorphic encryption** </br>
+
+An encryption scheme E that allows computation on ciphertexts c belongs to C (where C denotes the ciphertext space). Generating an encrypted result which, when decrypted, matches the result of the operations as if they had been performed on the plaintext.</br>
+
+**RSA example: Multiplicative property**
+E(M1)E(M2)=M1^eM2^e=E(M1M2)
+</br>
+Where M1,M2are two plaintexts, Eis the encryption algorithm and eis the RSA public exponent.</br>
+
+**ZKP - zero knowledge proof** </br>
+A Zero knowledge proof is a cryptographic protocol ⟨P, V ⟩, where a prover P can convince a verifier Vthat she knows a secret s without sharing the secret itself. The verifier responds to challenges set by the verifier by sending a proof of knowledge of s.</br> 
+
+  
+ ### Verification of computation on HellHound  <a name="verification"></a>
+  
+  to be filled </br>
+
   
 ## HellHound Use cases  <a name="usecases"></a>
-
   ### Key custody - key management <a name="keycustody"></a>
+  
+Key custody is a very important and sensitive topic that concerns cryptocurrencies. All current solutions that provide key protection are mostly hardware based or rely on central servers storage. Threshold cryptography and Homomorphic Encryption can be used as methods to guarantee a high level of security by distributing different key shares between several custodians who do not share any information between one another about their shares and manage still to sign transactions in a secure way. </br>
+
   ### DNA sequence searching <a name="dna"></a>
+  
+*Example: A decentralized "23andMe"*</br>
+A startup has developed a great algorithm that can, given health data from its user (here DNA), provide insights about origins and family connection to the user (19). However that startup wants nothing to do with the actual DNA of its users and believe they shouldn't have a database with this information under its responsibility. With HellHound they can create a service using blind computation and tell its users: "you only have to send an encrypted file with your DNA and you will get back your results, we will never see the file you send us and we will never see the results provided by our algorithm."</br>
+People here will pay to use their service (the unique algorithm) but they won't pay the "double price" of giving away their DNA information too.</br>
+
+
   ### Salaries - analytics without disclosing salaries <a name="analytics"></a>
+  
+A tool that can take salaries and other information about employees and use a comparison algorithm to generate analytics. 
+To get some salaries data (in a private manner) we could use a zero knowledge proof system and figure out if gap differences exist between people (along very specific criterias such as gender, experience, location etc.) without disclosing anyone salary/name.</br>
+This way if gaps exist, the employees will know about it and won’t need to trust a central part (the HR service or the company in general) for a fair assessment of their situation. </br>
+Companies can have a fair and transparent process around HR & compensation policy without exposing themselves to legal risks or making some people uncomfortable within their organization with a 100% transparent policy.</br>
+
+
   ### Kidner - matching algorithm    <a name="matching"></a>
-  ### Voting    <a name="voting"></a>
+Kidner is a platform that helps healthcare facilities finding a match for kidney paired-donation (20).</br>
+It's a global database, Blockchain-based, secured with cryptographic tools.</br>
+Kidner increases the chance to find rapidly a proper match while being fully protected. </br>
+Privacy and confidentiality are preserved thanks to encryption tools and certificates are issued by authorized healthcare entities. The algorithm operates in real time and is decentralized.</br>
+When a match is found, Kidner is notified and the recipient Doctor and healthcare professionals receive all the information needed to arrange the operation logistics.</br>
+Kidner offers the opportunity to extend paired exchange for all incompatible donor-recipient pairs in a secure and rapid way.</br>
+
   ### Quantum safe approaches    <a name="quantum"></a>
+  
+  The security behind most of the cryptographic protocols is based on the hardness of solving some mathematical problems. We take as example RSA (Factorisation problem) and ECDSA (Discrete Logarithm problem).</br>
+
+Blockchain technology relies on several cryptographic techniques in several ways:</br>
+- **Public Key Encryption**: sign transactions using digital signature (ECDSA algorithm) and for data encryption. </br>
+- **Hash Functions**: each block contains the hash (cryptographic fingerprint) of the previous block, these one way functions are resilient to collision which makes a single change on the input changes the whole blockchain history which is nearly impossible since attackers must control over 51% of the network to accomplish such attack.</br>
+- **Merkle tree proofs**: used to verify the sequence number of a specific blockchain transaction in the entire history of the blockchain.</br></br>
+
+Quantum algorithms like Shor and Grover  (21) can solve several mathematical problems. Shor for example can solve both the factorisation and Discrete logarithms in polynomial time which would break both RSA and ECDSA algorithms. </br>
+
+The goal of **post-quantum cryptography** (also known as quantum-resistant cryptography) is to develop cryptographic systems that are secure against both quantum and conventional computers and can interoperate with existing communication protocols and networks. </br>
+HellHound gives a set of different post-quantum cryptographic libraries to be used by developers while building their dApps in order to make sure that they will not be vulnerable to quantum attacks in the future. </br>
+
 
 
 ## Economical model   <a name="model"></a>
   ### Business model    <a name="businessmodel"></a>
-  ### Incentivization system    <a name="incentivization"></a>
-  ### Node incentivization    <a name="nodeincentivization"></a>
-  ### Decentralized reward delivery mechanism    <a name="reward"></a>
-  ### Cerberus incentivization  <a name="subreward"></a>
   
+Everytime the HellHound PAADS platform is used (i.e. an end-user sends token to STYX escrow contracts to deploy its circuits on HH, or for verification tasks), a small fee is sent to the HH treasure safe. </br>
+
+
+This will help HellHound adopt a sustainable model in the long-term and maintain the platform as well as multiple free services and tools by paying a team of researchers (cryptographers, computer scientist), engineers, blockchain architects, data scientists, full stack developers and cybersecurity experts.  </br>
+
+
+It will also be used to set up regular bounties either to stimulate the ecosystem around complex issues or to incentivize people to attack the system and provide feedback to the team. </br>
+
+We are waiting for projects like Aragon or other to provide a structure for a true DAO, which our team is interested to adopt (decentralized accountancy of HellHound). </br>
+
+But for now, we will only use a structure that we know in order to minimize the risk by reducing the unknown variable. You can expect a core team to be fully (but transparently) in charge of HellHound at least for the first main milestones (HH testnet, HH mainnet, HH production, HH massive auditing and attack period) that might take around 2-3 years. </br>
+
+
+
+  ### Incentivization system    <a name="incentivization"></a>
+**HellHound Node incentivization**
+ </br>
+
+HH nodes must be incentivized to stay honest and deliver correct results, this will be guaranteed by applying a reward/punishment system that rewards the honest nodes and punishes the malicious ones.  </br>
+
+Reward/Punishment: After the verification process is done, the security deposit will be given back to honest nodes and taken away from malicious ones to be distributed among the nodes which participated in the computation. </br>
+
+
+**Decentralized reward delivery mechanism** </br>
+
+The Styx contract keeps a record of the honest/dishonest nodes IDs in order to punish/reward them after finishing a certain computation/verification process. The steps are as follow: </br>
+1. Styx recovers the stakes back from malicious nodes. </br>
+2. Then, Styx adds it to the reward amount which was already paid by the user and kept locked with an escrow contract.  </br>
+3. Finally, Styx will distributes the overall amount between honest nodes in the current computation round.  </br>
+
+
+**User incentivization on the Cerberus side**  </br>
+
+The user go through the Cerberus client to interact with HellHound Nodes.  </br>
+
+The user  must stake if she wants to engage in a verification process with the HellHound nodes. </br>
+
+STYX contract makes sure both parties play honestly and do not cheat. So in case, the Cerberus client (i.e. the user) says he received a faulty result, there would be a judgement to determine if that was true or not, if not Cerberus will lose his stake. </br>
+
+
 ## HellHound attacks resistance  <a name="attacks"></a>
-## Roadmap  <a name="roadmap"></a>
+
+
+There are different attack vectors which could threaten the security of HellHound platform, in the following section we mention these attacks and the mitigation methods used by HellHound to resist them: </br>
+
+- DOS attack against Pythia (Pythia will be a centralized at first): set up of IDS and IPS ( intrusion detection systems and intrusion prevention systems ) those components analyse behavior of incoming requests to determine if they are malicious or not,  </br>
+- Sybil attack, </br>
+- Zombie nodes, </br>
+- Malicious Cerberus, </br>
+- Cryptographic vulnerabilities: We will use formal verification methods to insure correctness of executed code. Formal verification methods will guarantee memory correctness, functional correctness, protects against side channel attacks etc. </br>
+- Hardware vulnerabilities: we do not rely on hardware to preserve privacy at the core. We can use it as an added layer of difficulty for an attacker.</br>
+
+
 ## Join us in the HellHound journey  <a name="joinus"></a>
+
+Here are some ways you can participate to the HellHound Journey:</br>
+
+- Github - https://github.com/ConsenSys/hellhound </br>
+- Twitter - https://twitter.com/hellhound_eth </br>
+- Medium - https://medium.com/@hellhound_eth </br>
+
+
+
 ## Conclusion  <a name="conclusion"></a>
+
+
+In this paper we introduced HellHound, a decentralized blind computation platform.</br>
+We described the ecosystem of actors as well as the unique approach we chose to solve the scalability and privacy issues around data computation. </br>
+HellHound added value relies on a recommendation engine, a decentralized network of vetted nodes and set of tools (framework, crypto libraries) that will be easy and safe to use by dApp developers.</br>
+We believe that our solution will make dApps focus on solving the technical challenges they are facing in their applications and not having to worry about privacy of critical data being disclosed or tampered with.</br>
+
+Our vision is to make cryptography easily accessible to people with no cryptographic background in order to have more applications implementing privacy by design. It is our belief that while blockchains and decentralized technologies are laying a new path for the internet as we know it, we should focus on issues like privacy to create a better web.</br>
+We acknowledge the effort made by other projects working on privacy in the blockchain space and we hope to collaborate and find synergies that will put us closer to our goal: Privacy by design for all dApps. 
+</br>
+
 ## Acknowledgments  <a name="acknowledgments"></a>
+HellHound is a ConsenSys formation that was initially supported by the Ethcompute applied research effort. We would like to thank Prof. Dumas from Grenoble Alpes University and LJK Lab for his contribution to the Cryptosystems research.
+
 ## References <a name="references"></a>
+
+[1] Privacy by Design in Law, Policy and Practice, Dr Ann Cavoukian A White Paper for Regulators, Decision-makers and Policy-makers
+http://www.ontla.on.ca/library/repository/mon/25008/312239.pdf
+
+[2] Proof of contribution (Iexec)
+https://medium.com/iex-ec/about-trust-and-agents-incentives-4651c138974c
+
+[3] Golem verification method for rendering
+https://golem.network/crowdfunding/Golemwhitepaper.pdf
+
+[4] TrueBit verification game
+https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf
+
+[5] Enigma
+https://enigma.co
+
+[6] Enigma - Intel collaboration 
+https://www.getmonero.org
+
+[7] Monero
+https://www.getmonero.org
+
+[8] Zcash
+https://z.cash
+
+[9] Starkware
+https://starkware.co
+
+[10] Bulletproof
+https://eprint.iacr.org/2017/1066.pdf
+
+[11] ZKSnarks
+https://z.cash/technology/zksnarks/
+
+[12] ZKstarks a scalability solution
+https://www.youtube.com/watch?v=1KSwVIZ82hs
+
+[13] Meltdown and Spectre attacks
+https://www.zdnet.com/article/spectre-and-meltdown-insecurity-at-the-heart-of-modern-cpu-design/
+
+[14] Foreshadow
+https://foreshadowattack.eu
+
+[15] Memory encryption Engine
+https://eprint.iacr.org/2016/204.pdf
+
+[16] Decentralized reputation system
+https://hal.archives-ouvertes.fr/hal-01344750
+
+[17] HeartBleed bug
+http://heartbleed.com
+
+[18] CasheBleed Side Channel Attack against OpenSSL
+https://ts.data61.csiro.au/projects/TS/cachebleed/ 
+
+[19] Bug in libsnark
+https://electriccoin.co/blog/zcash-counterfeiting-vulnerability-successfully-remediated/
+
+[20] 23andMe
+https://www.23andme.com/en-int/
+
+[21] Kidner Project
+https://www.kidner-project.com
+
+[22] Quantum computing and Shor Algorithm
+https://pdfs.semanticscholar.org/8072/dc7247460849b18abbb463429a09cfb2e3e6.pdf https://arxiv.org/abs/quant-ph/9508027 
+
 
 
 
