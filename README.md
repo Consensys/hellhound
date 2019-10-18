@@ -1,5 +1,5 @@
 # Hellhound
-HellHound is a **decentralized blind computation** platform.<br/
+HellHound is a **decentralized blind computation** platform. <br/>
 
 
 <div align="center"> <img src="https://miro.medium.com/max/480/1*ShmaZ3Rg_xxO7P5BLQNruA.gif"> </div>
@@ -32,14 +32,13 @@ She is also a technical advisor on the board of several Blockchain projects and 
 
 **[Amira Bouguera - Co-Founder - Cryptographer](https://www.linkedin.com/in/amira-bouguera-282025a6/)**
 
-Amira Bouguera is a Cryptographer, Mathematician and works as a cryptographer @Consensys. She has previously worked in the blockchain space prior to joining Consensys as a security engineer at Stratumn (traceability blockchain startup) and smart contract security auditor. Amira became interested in privacy and security related issues when she was studying cryptography. During that period, she worked in LJK applied math laboratory with one of the best international cryptographers on outsourced computation using Homomorphic encryption and Zero knowledge methods. She helped organizing the Grehack security conference and workshops. She is also an international speaker and gave talks about blockchain introduction, smart contracts security and cryptography during conferences (Dappcon) and meetups.
+Amira Bouguera is a Cryptographer, Mathematician and works as a cryptographer @Consensys. She has previously worked in the blockchain space prior to joining Consensys as a security engineer at Stratumn (traceability blockchain startup) and smart contract security auditor. Amira became interested in privacy and security related issues when she was studying cryptography. During that period, she worked in LJK applied math laboratory with one of the best international cryptographers on outsourced computation using Homomorphic encryption and Zero knowledge methods. She is also an international speaker and gave talks about blockchain introduction, smart contracts security and cryptography during conferences and meetups.
 
 
 
 **[Abdelhamid Bakhta - Tech Lead and Full stack engineer](https://www.linkedin.com/in/abdelhamidbakhta/)** 
 
-Abdelhamid is highly skilled, versatile and creative engineer with experience in e-banking and software development. Abdelhamid works daily with cloud infrastructure solution. 
-He has excellent programming skills in several languages as well as a tech lead (management and business administration). He also has strong technical assets in security. Previously security officer of a fintech startup, he lead PCI certification compliance program for a Cloud Based Payment platform. Blockchain enthusiast, Abdelhamid is passionated by decentralization and actively followed the blockchain world since 5 years. Co-inventor of multiple patents, Abdelhamid has also a strong interest for ethical hacking.
+Abdelhamid is an engineer with experience in e-banking and software development. Abdelhamid works daily with cloud infrastructure solution and has excellent programming skills in several languages as well as a tech lead (management and business administration). He also has strong technical skills in security and was security officer of a fintech startup. He lead PCI certification compliance program for a Cloud Based Payment platform. Blockchain enthusiast, Abdelhamid is passionated by decentralization and actively followed the blockchain world since 5 years. Co-inventor of multiple patents, Abdelhamid has also a strong interest for ethical hacking.
 
 
 ## Components
