@@ -7,7 +7,8 @@
 
 
 <img src="https://live.staticflickr.com/65535/48920282966_ebf52d5c60.jpg" width="500" height="333" alt="HH_logo_black-1"> 
-**PRIVACY BY DESIGN FOR ALL (D)APPS**
+Privacy By Design for all (D)APPS
+
 </br>
 </br>
 </br>
