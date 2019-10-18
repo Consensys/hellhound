@@ -6,8 +6,8 @@
 **[Sajida Zouarhi, co-founder](https://www.linkedin.com/in/sajidazouarhi/)** (MS Engineering, Computer Science researcher)
 
 
-<div align="center"> <a data-flickr-embed="true" href="https://www.flickr.com/photos/185058771@N07/48920282966/in/dateposted-public/" title="HH_logo_black-1"><img src="https://live.staticflickr.com/65535/48920282966_ebf52d5c60.jpg" width="500" height="333" alt="HH_logo_black-1"></a></div> 
-<div align="center">PRIVACY BY DESIGN FOR ALL (D)APPS</div>
+<img src="https://live.staticflickr.com/65535/48920282966_ebf52d5c60.jpg" width="500" height="333" alt="HH_logo_black-1"> 
+**PRIVACY BY DESIGN FOR ALL (D)APPS**
 </br>
 </br>
 </br>
@@ -669,6 +669,9 @@ We acknowledge the effort made by other projects working on privacy in the block
 
 ## Acknowledgments  <a name="acknowledgments"></a>
 HellHound is a ConsenSys formation that was initially supported by the Ethcompute applied research effort. We would like to thank Prof. Dumas from Grenoble Alpes University and LJK Lab for his contribution to the Cryptosystems research.
+
+![HellHound Banner](https://live.staticflickr.com/65535/48921448902_318b032038_b.jpg)
+
 
 ## References <a name="references"></a>
 
