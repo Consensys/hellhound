@@ -3,7 +3,7 @@ HellHound is a **decentralized blind computation** platform.
 
 
 <div align="center"> <img src="https://miro.medium.com/max/480/1*ShmaZ3Rg_xxO7P5BLQNruA.gif"> </div>
-
+<br/><br/>
 
 
 Blind computation is a process by which a function (or circuit) is successfully applied on encrypted inputs to provide the expected output. This output, depending on the use case, can be encrypted as well or it can be a plain text. 
