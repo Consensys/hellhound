@@ -23,10 +23,10 @@ Privacy By Design for all (D)APPS
 
 [Abstract](#asbtract) </br>
 1. [Introduction](#introduction) </br>
-    1.2. [A decentralized environment for trusted computation](#decentralized) </br>
-    1.3. [Privacy by design for dApps, now!](#privacy) </br>
-    1.4. [State of the art - Actors of the Data Computation Ecosystem](#stateoftheart) </br>
-    1.5. [Why a Software-based approach?](#softwarebased) </br>
+    1.1. [A decentralized environment for trusted computation](#decentralized) </br>
+    1.2. [Privacy by design for dApps, now!](#privacy) </br>
+    1.3. [State of the art - Actors of the Data Computation Ecosystem](#stateoftheart) </br>
+    1.4. [Why a Software-based approach?](#softwarebased) </br>
    
 2. [Introducing the HellHound project](#hellhound) </br>
     2.1. [HellHound Triptych △    ](#triptych) </br>
