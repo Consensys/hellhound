@@ -1,6 +1,8 @@
 # Hellhound
 HellHound is a **decentralized blind computation** platform.
 
+<div align="center"> <img src="https://miro.medium.com/max/480/1*ShmaZ3Rg_xxO7P5BLQNruA.gif"> </div>
+
 Blind computation is a process by which a function (or circuit) is successfully applied on encrypted inputs to provide the expected output. This output, depending on the use case, can be encrypted as well or it can be a plain text. 
 It is called a “Blind” computation since no one, except the data provider, know the actual data being computed.
 HellHound’s goal is to provide a truly decentralized computing environment and a set of cryptographic tools to enable dapps developers to implement privacy-by-design.
@@ -161,7 +163,7 @@ In Japan, seals in general are referred to as Hanko. In HellHound context, Hanko
 
 We created a universe around HellHound to make the complexity of our technology less threatening and more playful.
 
-Each technical component of HellHound is a character of the HellHound universe and was especially designed for it. We used this universe to tell stories about data privacy and to create experiences in the escape game we organized at devcon 4.
+Each technical component of HellHound is a character of the HellHound universe and was especially designed for it. We used this universe to tell stories about data privacy and to create experiences in the escape game we organized at Devcon4.
 
 Find out more here:
 
@@ -169,5 +171,5 @@ Find out more here:
 
 [HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2)](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
 
-<img src="https://miro.medium.com/max/480/1*ShmaZ3Rg_xxO7P5BLQNruA.gif">
+
 
