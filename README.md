@@ -27,7 +27,7 @@ We have a chance at rebuilding the internet, so as Richard Branson put it "let's
 **[Sajida Zouarhi - Co-Founder - Blockchain architect](https://www.linkedin.com/in/sajidazouarhi/)**
 
 Sajida Zouarhi is an Engineer and worked as a Blockchain Architect @Consensys. She has been working on blockchain projects since 2015 and as a Computer Science researcher since 2014, moslty on transmission and computation of private data (key words: blind computation, complex systems, recommendation engine, SLAs, ontologies, telecommunication chains etc.).
-She is also a technical advisor on the board of several Blockchain projects and has performed due-diligence for several startup investments. As the founder of the [Kidner Project](https://www.kidner-project.com) (social impact), she collaborated with WHO to help prevent Kidney Trafficking using Blockchain technology. She is an international Speaker, Hackathon Mentor and organizer of the Blockfest (hackathons & conferences) that she co-founded in 2016 in France.
+She is also a technical advisor on the board of several Blockchain projects and has performed due-diligence for several startup investments. As the co-founder of the [Kidner Project](https://www.kidner-project.com) (social impact), she collaborated with WHO to help prevent Kidney Trafficking using Blockchain technology. She is an international Speaker, Hackathon Mentor and organizer of the Blockfest (hackathons & conferences) that she co-founded in 2016 in France.
 
 
 **[Amira Bouguera - Co-Founder - Cryptographer](https://www.linkedin.com/in/amira-bouguera-282025a6/)**
