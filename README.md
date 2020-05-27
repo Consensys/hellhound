@@ -36,7 +36,7 @@ Amira Bouguera is a Cryptographer, Mathematician and works as a cryptographer @C
 
 
 
-**[Abdelhamid Bakhta - Tech Lead and Full stack engineer](https://www.linkedin.com/in/abdelhamidbakhta/)** 
+**[Abdelhamid Bakhta - Tech Lead and Full stack engineer](http://abdelhamidbakhta.github.io/)** 
 
 Abdelhamid is an engineer with experience in e-banking and software development. Abdelhamid works daily with cloud infrastructure solution and has excellent programming skills in several languages as well as a tech lead (management and business administration). He also has strong technical skills in security and was security officer of a fintech startup. He lead PCI certification compliance program for a Cloud Based Payment platform. Blockchain enthusiast, Abdelhamid is passionated by decentralization and actively followed the blockchain world since 5 years. Co-inventor of multiple patents, Abdelhamid has also a strong interest for ethical hacking.
 
@@ -173,5 +173,3 @@ Find out more here:
 
 [HELLHOUND ESCAPE GAME - A CRYPTO ADVENTURE (2/2)](https://medium.com/@hellhound_eth/hellhound-escape-game-814b4ac600c0)
 
-
-http://abdelhamidbakhta.github.io/
